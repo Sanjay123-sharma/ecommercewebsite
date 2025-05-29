@@ -5,7 +5,7 @@ import storage from "redux-persist/lib/storage";
 const persistConfig = {
   key: "root",
   storage,
-  version: 2, // Increment this when your reducer changes
+  
   
 };
 const userReducer=combineReducers({
