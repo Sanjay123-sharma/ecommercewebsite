@@ -15,7 +15,7 @@ const handleDelete=(id)=>{
   {/* Header */}
   <header className="bg-white-800 shadow p-4 flex items-center justify-between">
     <h1 className="text-2xl font-bold text-white-200" style={{color:'white'}}>My Orders</h1>
-    <NavLink to="/" className="text-blue-600 hover:underline">Home</NavLink>
+    <NavLink to="/" className="text-blue-600 font-bold hover:underline">Home</NavLink>
   </header>
     <h1 className="text-2xl font-bold text-white-200 text-center" style={{color:'white'}}>Confirmed Orders</h1>
 
