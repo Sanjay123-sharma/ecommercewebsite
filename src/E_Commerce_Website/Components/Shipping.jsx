@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
-import {  useNavigate } from "react-router";
-import { addOrder, removeAllProducts } from '../Store/Slice';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { addOrder, removeAllProducts } from "../Store/Slice";
 
 export default function Shipping() {
-     const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [State, setState] = useState("");
   const [pinCode, setPinCode] = useState("");
   const [address, setAddress] = useState("");
   const [landmark, setLandMark] = useState("");
   const Navigate = useNavigate();
   const dispatch = useDispatch();
-  const handleAddress=(e)=>{
+  const handleAddress = (e) => {
     e.preventDefault();
-    setName('')
-    setState('')
-    setPinCode('')
-    setAddress('')
-    setLandMark('')
-    dispatch(addOrder())
+    setName("");
+    setState("");
+    setPinCode("");
+    setAddress("");
+    setLandMark("");
+    dispatch(addOrder());
     dispatch(removeAllProducts());
-    Navigate('/MyOrders')
-  }
+    Navigate("/MyOrders");
+  };
   return (
-     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white p-6 rounded-2xl shadow-lg">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Enter Address
@@ -105,14 +105,11 @@ export default function Shipping() {
             />
           </div>
 
-          <button
-           
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition"
-          >
+          <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
             Place Order
           </button>
         </form>
       </div>
     </div>
-  )
+  );
 }
